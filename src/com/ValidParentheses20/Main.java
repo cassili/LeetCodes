@@ -33,6 +33,7 @@ public class Main {
                 }
             }
         }
+
         return stack.size() >= 1 ? false:true;
 
     }
