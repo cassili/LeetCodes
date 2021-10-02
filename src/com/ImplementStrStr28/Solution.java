@@ -10,7 +10,7 @@ package com.ImplementStrStr28;
  */
 
 public class Solution {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
 
 
 
