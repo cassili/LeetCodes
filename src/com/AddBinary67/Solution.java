@@ -15,6 +15,8 @@ public class Solution {
         char c = '0';
         StringBuffer sb = new StringBuffer("");
 
+
+
         // 能相加的位--相加
         for (; i >= 0; i--) {
             int a_num = a.charAt(i) - '0';
