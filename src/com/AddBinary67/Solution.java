@@ -16,7 +16,6 @@ public class Solution {
         StringBuffer sb = new StringBuffer("");
 
 
-
         // 能相加的位--相加
         for (; i >= 0; i--) {
             int a_num = a.charAt(i) - '0';
@@ -43,7 +42,7 @@ public class Solution {
         int l_len = 0;
 
         if (a_len - b_len > 0) {  // a 长
-            sb.append()
+//            sb.append()
 
         } else if (a_len == b_len) {  // a 和 b 一样长
             if (c == '1') {
@@ -53,6 +52,7 @@ public class Solution {
             l_len = b_len - a_len;
         }
 
+        return sb.reverse().toString();
 
     }
 
