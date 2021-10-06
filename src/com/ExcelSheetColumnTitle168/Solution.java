@@ -41,7 +41,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int num1 = 2147483647;
+        int num1 = 1406;
         System.out.println(convertToTitle(num1));
     }
 }
