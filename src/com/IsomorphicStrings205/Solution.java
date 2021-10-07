@@ -1,6 +1,7 @@
 package com.IsomorphicStrings205;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * @Description:
@@ -12,26 +13,24 @@ import java.util.HashMap;
 public class Solution {
 
     public static boolean isIsomorphic(String s, String t) {
-        HashMap<Character, Character> characterHashMap = new HashMap<>();
+        HashMap<Character, Character> map = new HashMap<>();
+        HashSet<Character> set = new HashSet<>();
 
         for (int i = 0; i < s.length(); i++) {
-            if (characterHashMap.containsKey(s.charAt(i)) && characterHashMap.get(s.charAt(i)) != t.charAt(i)) {
-                return false;
-            }
-
-            if (characterHashMap.containsValue(t.charAt(i))) {
-                for (Character getKey : characterHashMap.keySet()) {
-                    if (characterHashMap.get(getKey).equals(t.charAt(i))) {
-                        if (t.charAt(i) != s.charAt(i)) {
-                            return false;
-                        }
-                    }
+            char key = s.charAt(i);
+            char value = t.charAt(i);
+            if (map.containsKey(key) == false) {  // key 不在 map 中
+                if (set.contains(value)) {
+                    return false;
                 }
-                return false;
+                map.put(key, value);
+                set.add(value);
+            } else {  // key 在 map 中
+                if (!map.get(key).equals(value)) {
+                    return false;
+                }
             }
-            characterHashMap.put(s.charAt(i), t.charAt(i));
         }
-
         return true;
 
     }
